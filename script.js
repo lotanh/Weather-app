@@ -13,11 +13,9 @@ btn.addEventListener('click', (event) => {
     userType.value = ''
     if (userInput == '') {
         alert('Please write a city!');
-
     }
      else {
         userInput = userInput.toLowerCase();
-        console.log(userInput);
     
         let x = new XMLHttpRequest();
     
@@ -34,7 +32,7 @@ btn.addEventListener('click', (event) => {
             }
             else{
                 var weatherData = JSON.parse(x.response);
-                console.log(weatherData);
+                // console.log(weatherData);
                 currentWeather.push(weatherData);
                 // console.log(currentWeather)
                 createCityCard(weatherData);
@@ -52,6 +50,7 @@ const checkList = currentWeather.filter(item => {
 const createCityCard = (city) => {
     // creating element
     let container = document.getElementById('container')
+    container.innerHTML = ""
     let div = document.createElement('div')
     let divHeader = document.createElement('div')
     divHeader.classList.add('divHeader')
