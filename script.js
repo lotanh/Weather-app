@@ -2,7 +2,7 @@ const btn = document.getElementById('btn')
 let currentWeather =[]
 var toggleBtn = document.getElementById("switchValue")
 toggleBtn.checked = true
-let toggleDiv = document.querySelector('.temp')
+let toggleDiv = document.querySelector('.temp-toggle')
 toggleDiv.style.display = 'NONE'
 // console.log(isChecked);
 
@@ -14,7 +14,8 @@ btn.addEventListener('click', (event) => {
     if (userInput == '') {
         alert('Please write a city!');
 
-    } else {
+    }
+     else {
         userInput = userInput.toLowerCase();
         console.log(userInput);
     
