@@ -16,7 +16,7 @@ btn.addEventListener('click', (event) => {
     }
      else {
         userInput = userInput.toLowerCase();
-    
+
         let x = new XMLHttpRequest();
     
         x.open('get' ,`https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=6bc236fa8bd5e7e03f83fd8cea3eac74`);
@@ -50,7 +50,6 @@ const checkList = currentWeather.filter(item => {
 const createCityCard = (city) => {
     // creating element
     let container = document.getElementById('container')
-    container.innerHTML = ""
     let div = document.createElement('div')
     let divHeader = document.createElement('div')
     divHeader.classList.add('divHeader')
